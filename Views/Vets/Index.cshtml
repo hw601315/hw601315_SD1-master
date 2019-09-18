@@ -1,0 +1,45 @@
+﻿@model IEnumerable<hw601315_SD1.Models.Vet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Current Vets</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.vetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.technicianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vetLocation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.technicianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vetID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vetID })
+        </td>
+    </tr>
+}
+
+</table>

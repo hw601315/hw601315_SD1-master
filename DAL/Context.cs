@@ -11,18 +11,26 @@ namespace hw601315_SD1.DAL
     {
         public Context() : base("name=DefaultConnection")
         {
-         // this method is a 'constructor' and is called when a new context is created
-         // the base attribute says which connection string to use
+            // this method is a 'constructor' and is called when a new context is created
+            // the base attribute says which connection string to use
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Context, hw601315_SD1.Migrations.MISContext.Configuration>("DefaultConnection"));
         }
 
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Vet> Vets { get; set; }
+        public DbSet<Visit> Visits { get; set; }
         //public DbSet<Product> Products { get; set; }
         //public DbSet<OrderDetail> OrderDetails { get; set; }
 
-
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
-    
+
+  
+
     // Include each object here. The value inside <> is the name of the class,
     // the value outside should generally be the plural of the class name
     // and is the name used to reference the entity in code

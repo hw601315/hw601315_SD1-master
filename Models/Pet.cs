@@ -18,6 +18,8 @@ namespace hw601315_SD1.Models
                 return ownerLastName + ", " + ownerFirstName;
             }
         }
-        public int ownerPhoneNumber { get; set; }
+        public string ownerPhoneNumber { get; set; }
+
+        public ICollection<Visit> Visit { get; set; }
     }
 }

@@ -9,17 +9,27 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h2>What's Happening</h2>
         <p>
-           Check out what's happening in the business world today
+            Check out what's happening in the business world today
         </p>
         <p><a class="btn btn-default" href="https://www.forbes.com/business/#4d77e107535f">Learn more &raquo;</a></p>
+
+
+
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h2>Connect with Me</h2>
         <p>Get to know more about me, my work experiences and my passions.</p>
         <p><a class="btn btn-default" href="https://www.linkedin.com/in/hannahwilson19/">View My Profile &raquo;</a></p>
     </div>
-   
+
+    <div class="col-md-4">
+        <h2>SD2 MVC</h2>
+        <p>Links to create, edit, or delete Pets, Vets, and Visits.</p>
+        @Html.ActionLink("Pets", "Index", "Pets")<br />
+        @Html.ActionLink("Vets", "Index", "Vets")<br />
+        @Html.ActionLink("Visits", "Index", "Visits")<br />
+    </div>
 </div>

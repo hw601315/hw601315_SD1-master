@@ -1,0 +1,42 @@
+﻿@model hw601315_SD1.Models.Vet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.technicianName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.technicianName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vetLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetLocation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vetID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

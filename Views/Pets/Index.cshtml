@@ -1,0 +1,63 @@
+﻿@model IEnumerable<hw601315_SD1.Models.Pet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Current Pets</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.petName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.breed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ownerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ownerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ownerPhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.petName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ownerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ownerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ownerPhoneNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.petID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.petID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.petID })
+        </td>
+    </tr>
+}
+
+</table>

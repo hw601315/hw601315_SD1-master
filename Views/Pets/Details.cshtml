@@ -1,0 +1,66 @@
+﻿@model hw601315_SD1.Models.Pet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.petName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.petName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.breed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.breed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.petAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.petAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ownerPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ownerPhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.petID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
