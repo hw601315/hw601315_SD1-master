@@ -12,6 +12,7 @@ namespace hw601315_SD1.Migrations.MISContext
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\MISContext";
             ContextKey = "hw601315_SD1.DAL.Context";
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(hw601315_SD1.DAL.Context context)
