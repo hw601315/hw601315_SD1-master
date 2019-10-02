@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<hw601315_SD1.Models.Pet>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Current Pets";
 }
 
     <div class=" alert alert-info">
         <h2>Current Pets</h2>
     </div>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a Pet", "Create")
 </p>
 <table class="table table-bordered">
     <tr>
@@ -62,3 +62,13 @@
 }
 
 </table>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <a href="small-pets-easy-to-care-for.jpg">
+                <img src="small-pets-easy-to-care-for.jpg" alt="Pets" />
+            </a>
+        </div>
+    </div>
+</div>

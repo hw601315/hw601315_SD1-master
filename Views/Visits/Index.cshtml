@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<hw601315_SD1.Models.Visit>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Scheduled Visits";
 }
 
-<h2>Scheduled Visits</h2>
+    <div class=" alert alert-info">
+        <h2>Scheduled Visits</h2>
+    </div>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Pet.petName)
@@ -35,7 +37,7 @@
             @Html.DisplayFor(modelItem => item.visitDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.visitID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.visitID }) | 
             @Html.ActionLink("Details", "Details", new { id=item.visitID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.visitID })
         </td>

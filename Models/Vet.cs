@@ -21,6 +21,7 @@ namespace hw601315_SD1.Models
         [StringLength(30)]
         public string technicianName { get; set; }
 
+        [Display(Name = "Vet Location")]
         public string vetLocation { get; set; }
 
         public ICollection<Visit> Visit { get; set; }

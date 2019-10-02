@@ -26,10 +26,18 @@
     </div>
 
     <div class="col-md-4">
-        <h2>SD2 MVC</h2>
+        <h2>SD3 MVC</h2>
         <p>Links to create, edit, or delete Pets, Vets, and Visits.</p>
         @Html.ActionLink("Pets", "Index", "Pets")<br />
         @Html.ActionLink("Vets", "Index", "Vets")<br />
         @Html.ActionLink("Visits", "Index", "Visits")<br />
+
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Vet
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">@Html.ActionLink("Add a Vet", "Index", "Vets")</a></li>
+            </ul>
+        </div>
     </div>
 </div>
